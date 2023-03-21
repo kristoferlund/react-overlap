@@ -22,28 +22,35 @@ import { OverlapHover, OverlapHoverImage } from "react-overlap";
 
 const logoData = [
   {
-    href: "https://link.com",
-    svg: <GithubLogo />,
+    svg: GithubSvg,
+    href: "https://github.com/givepraise/praise",
+    alt: "Github",
   },
   {
-    href: "https://link.com",
-    svg: <DiscordLogo />,
+    svg: DiscordSvg,
+    href: "https://discord.gg/U2ydzXBG6C",
+    alt: "Discord",
   },
   {
-    href: "https://link.com",
-    svg: <TwitterLogo />,
+    svg: TwitterSvg,
+    href: "https://twitter.com/givepraise",
+    alt: "Twitter",
   },
 ];
 
 const App = () => {
   return (
-    <div>
-      <OverlapHover size={30} spacing={10} overlap={0.4} direction="left">
-        {logoData.map((data, index) => (
-          <OverlapHoverSvg key={index} href={data.href} svg={data.svg} />
-        ))}
-      </OverlapHover>
-    </div>
+    <OverlapHover size={30} spacing={10} overlap={0.4} direction="left">
+      {logoData.map((data, index) => (
+        <OverlapHoverSvg
+          key={index}
+          alt={data.alt}
+          href={data.href}
+          className="opacity-100 hover:opacity-70" // Optional, tailwind example
+          svg={data.svg}
+        />
+      ))}
+    </OverlapHover>
   );
 };
 
@@ -56,12 +63,36 @@ export default App;
 import React from "react";
 import { OverlapHover, OverlapHoverImage } from "react-overlap";
 
+const logoData = [
+  {
+    img: GithubPng,
+    href: "https://github.com/givepraise/praise",
+    alt: "Github",
+  },
+  {
+    img: DiscordPng,
+    href: "https://discord.gg/U2ydzXBG6C",
+    alt: "Discord",
+  },
+  {
+    img: TwitterPng,
+    href: "https://twitter.com/givepraise",
+    alt: "Twitter",
+  },
+];
+
 const App = () => {
   return (
-    <OverlapHover direction="right">
-      <OverlapHoverImage img="/path/to/image1.png" href="https://example.com" />
-      <OverlapHoverImage img="/path/to/image2.png" href="https://example.com" />
-      <OverlapHoverImage img="/path/to/image3.png" href="https://example.com" />
+    <OverlapHover size={30} spacing={10} overlap={0.4} direction="right">
+      {logoData.map((data, index) => (
+        <OverlapHoverImage
+          key={index}
+          alt={data.alt}
+          href={data.href}
+          className="opacity-100 hover:opacity-70" // Optional, tailwind example
+          src={data.img}
+        />
+      ))}
     </OverlapHover>
   );
 };
@@ -86,10 +117,12 @@ The OverlapHover component supports dark mode, which can be enabled by setting t
 To enable dark mode, simply pass the `darkMode` prop to the `OverlapHover` component:
 
 ```jsx
-<OverlapHover darkMode={true}>// Your child components</OverlapHover>
+<OverlapHover darkMode={true}>
+  // Your OverlapHoverImage or OverlapHoverSvg components
+</OverlapHover>
 ```
 
-## Props
+## `OverlapHover` Props
 
 | Prop      | Type   | Default | Description                                                                                 |
 | --------- | ------ | ------- | ------------------------------------------------------------------------------------------- |

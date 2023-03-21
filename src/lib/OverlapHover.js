@@ -1,5 +1,3 @@
-import "./style.css";
-
 import React, { useState } from "react";
 
 const OverlapHover = ({
@@ -27,13 +25,37 @@ const OverlapHover = ({
   })`;
 
   return (
-    <div>
+    <>
+      <style>
+        {`
+          .overlap-hover {
+            display: flex;
+            justify-content: center;
+            display: inline-block;
+            position: relative;
+          }
+
+          .overlap-hover-image,
+          .overlap-hover-svg {
+            position: absolute;
+            transition: all 0.3s;
+          }
+
+          .overlap-hover-image.dark-mode ,
+          .overlap-hover-svg.dark-mode {
+            filter: invert(1);
+          }
+
+          .overlap-hover-link {
+            cursor: pointer;
+          }
+        `}
+      </style>
       <div
         className={`overlap-hover ${className}`}
         style={{ width: wrapperWidth, height: size }}
       >
         <div
-          className="relative"
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
           style={{ width: wrapperWidth, height: size }}
@@ -53,7 +75,7 @@ const OverlapHover = ({
           })}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default OverlapHover;

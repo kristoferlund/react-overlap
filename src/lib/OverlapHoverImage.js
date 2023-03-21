@@ -1,7 +1,7 @@
 import React from "react";
 
 const OverlapHoverImage = ({
-  img,
+  src,
   href,
   className = "",
   darkMode = false,
@@ -11,6 +11,7 @@ const OverlapHoverImage = ({
   spacing,
   overlap,
   direction,
+  alt,
 }) => {
   const positionStyle =
     direction === "right"
@@ -36,9 +37,9 @@ const OverlapHoverImage = ({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={`cursor-pointer ${className}`}
+        className={`overlap-hover-link ${className}`}
       >
-        <img src={img} alt="Logo" width={size} height={size} />
+        <img src={src} width={size} height={size} alt={alt} />
       </a>
     </div>
   );

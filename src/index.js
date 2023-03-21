@@ -1,5 +1,10 @@
-import Overlap from "./OverlapHover";
-import OverlapHoverImage from "./OverlapHoverImage";
-import OverlapHoverSvg from "./OverlapHoverSvg";
+import App from "./App";
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-export { Overlap as OverlapHover, OverlapHoverImage, OverlapHoverSvg };
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

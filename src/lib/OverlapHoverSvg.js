@@ -11,6 +11,7 @@ const OverlapHoverSvg = ({
   spacing,
   overlap,
   direction,
+  alt,
 }) => {
   const positionStyle =
     direction === "right"
@@ -27,6 +28,8 @@ const OverlapHoverSvg = ({
 
   const darkModeClass = darkMode ? "dark-mode" : "";
 
+  console.log(darkMode);
+
   return (
     <div
       className={`overlap-hover-svg ${darkModeClass}`}
@@ -36,9 +39,9 @@ const OverlapHoverSvg = ({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={`cursor-pointer ${className}`}
+        className={`overlap-hover-link ${className}`}
       >
-        {svg}
+        <img src={svg} alt={alt} />
       </a>
     </div>
   );

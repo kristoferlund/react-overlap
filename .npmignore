@@ -1,4 +1,6 @@
 src
-webpack.config.js
-.babelrc
-.eslintrc.js
+.gitignore
+.npmignore
+babel.config.js
+package-lock.json
+tailwind.config.js
