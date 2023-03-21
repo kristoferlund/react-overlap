@@ -28,8 +28,6 @@ const OverlapHoverSvg = ({
 
   const darkModeClass = darkMode ? "dark-mode" : "";
 
-  console.log(darkMode);
-
   return (
     <div
       className={`overlap-hover-svg ${darkModeClass}`}

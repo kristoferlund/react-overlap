@@ -1,6 +1,10 @@
 import "./App.css";
 
-import { OverlapHover, OverlapHoverImage, OverlapHoverSvg } from "./lib";
+import {
+  OverlapHover,
+  OverlapHoverImage,
+  OverlapHoverSvg,
+} from "./lib/components";
 
 import DiscordPng from "./img/png/Discord.png";
 import DiscordSvg from "./img/svg/Discord.svg";
@@ -34,8 +38,8 @@ function App() {
   return (
     <div>
       <div className="flex justify-center min-h-screen">
-        <div className="max-w-md w-full mx-5 my-auto">
-          <article className="font-sans prose lg:prose-xl mb-4 mt-10">
+        <div className="w-full max-w-md mx-5 my-auto">
+          <article className="mt-10 mb-4 font-sans prose lg:prose-xl">
             <h1>React Overlap</h1>
             <p>
               Create a hover effect where images or SVG graphics overlap each
@@ -50,7 +54,7 @@ function App() {
             </p>
             <h3>Right to left</h3>
           </article>
-          <div className="flex justify-end inset-0 border border-black/5 rounded-xl p-4 bg-slate-100 mb-4">
+          <div className="inset-0 flex justify-end p-4 mb-4 border border-black/5 rounded-xl bg-slate-100">
             <OverlapHover size={30} spacing={10} overlap={0.4} direction="left">
               {logoData.map((data, index) => (
                 <OverlapHoverSvg
@@ -63,10 +67,10 @@ function App() {
               ))}
             </OverlapHover>
           </div>
-          <article className="font-sans prose lg:prose-xl mb-4">
+          <article className="mb-4 font-sans prose lg:prose-xl">
             <h3>Left to right</h3>
           </article>
-          <div className="flex inset-0 border border-black/5 rounded-xl p-4 bg-slate-100 mb-4">
+          <div className="inset-0 flex p-4 mb-4 border border-black/5 rounded-xl bg-slate-100">
             <OverlapHover
               size={30}
               spacing={10}
@@ -84,10 +88,10 @@ function App() {
               ))}
             </OverlapHover>
           </div>
-          <article className="font-sans prose lg:prose-xl mb-4">
+          <article className="mb-4 font-sans prose lg:prose-xl">
             <h3>Size/overlap/spacing</h3>
           </article>
-          <div className="flex inset-0 border border-black/5 rounded-xl p-4 bg-slate-100 mb-4">
+          <div className="inset-0 flex p-4 mb-4 border border-black/5 rounded-xl bg-slate-100">
             <OverlapHover
               size={60}
               spacing={30}
@@ -105,10 +109,10 @@ function App() {
               ))}
             </OverlapHover>
           </div>
-          <article className="font-sans prose lg:prose-xl mb-4">
+          <article className="mb-4 font-sans prose lg:prose-xl">
             <h3>Dark mode</h3>
           </article>
-          <div className="flex inset-0 border border-black/5 rounded-xl p-4 bg-slate-600 mb-4">
+          <div className="inset-0 flex p-4 mb-4 border border-black/5 rounded-xl bg-slate-600">
             <OverlapHover
               size={30}
               spacing={10}
@@ -127,10 +131,10 @@ function App() {
               ))}
             </OverlapHover>
           </div>
-          <article className="font-sans prose lg:prose-xl mb-4">
+          <article className="mb-4 font-sans prose lg:prose-xl">
             <h3>PNG images</h3>
           </article>
-          <div className="flex inset-0 border border-black/5 rounded-xl p-4 bg-slate-100 mb-4">
+          <div className="inset-0 flex p-4 mb-4 border border-black/5 rounded-xl bg-slate-100">
             <OverlapHover
               size={30}
               spacing={10}
@@ -148,10 +152,10 @@ function App() {
               ))}
             </OverlapHover>
           </div>
-          <article className="font-sans prose lg:prose-xl mb-4">
+          <article className="mb-4 font-sans prose lg:prose-xl">
             <h3>PNG images, dark mode</h3>
           </article>
-          <div className="flex inset-0 border border-black/5 rounded-xl p-4 bg-slate-600 mb-4">
+          <div className="inset-0 flex p-4 mb-4 border border-black/5 rounded-xl bg-slate-600">
             <OverlapHover
               size={30}
               spacing={10}
@@ -170,7 +174,7 @@ function App() {
               ))}
             </OverlapHover>
           </div>
-          <article className="font-sans prose lg:prose-xl mb-4">
+          <article className="mb-4 font-sans prose lg:prose-xl">
             <h3>License</h3>
             <p>
               MIT License

@@ -1,0 +1,37 @@
+{
+  "name": "react-overlap",
+  "version": "0.0.7",
+  "description": "A React component for creating overlapping, hoverable images and SVGs",
+  "main": "./dist/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kristoferlund/react-overlap.git"
+  },
+  "author": "Kristofer Lund <kristofer@fmckl.se>",
+  "keywords": [
+    "react",
+    "overlap",
+    "hover",
+    "image",
+    "svg"
+  ],
+  "bugs": {
+    "url": "https://github.com/kristoferlund/react-overlap/issues"
+  },
+  "homepage": "https://github.com/kristoferlund/react-overlap#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2"
+  },
+  "scripts": {
+    "build": "rm -rf dist && NODE_ENV=production babel ./components --out-dir dist --copy-files"
+  }
+}

@@ -32,7 +32,6 @@ const OverlapHoverSvg = _ref => {
     right: expand ? "".concat(index * size + index * spacing, "px") : "".concat(index * size - index * (size * overlap), "px")
   };
   const darkModeClass = darkMode ? "dark-mode" : "";
-  console.log(darkMode);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "overlap-hover-svg ".concat(darkModeClass),
     style: _objectSpread({
