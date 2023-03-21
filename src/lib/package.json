@@ -19,7 +19,6 @@
   "bugs": {
     "url": "https://github.com/kristoferlund/react-overlap/issues"
   },
-  "homepage": "https://github.com/kristoferlund/react-overlap#readme",
   "dependencies": {
     "@babel/polyfill": "^7.12.1"
   },

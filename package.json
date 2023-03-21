@@ -1,6 +1,7 @@
 {
   "name": "react-overlap",
   "version": "0.0.7",
+  "private": true,
   "description": "A React component for creating overlapping, hoverable images and SVGs.",
   "main": "./dist/index.js",
   "license": "MIT",
@@ -19,7 +20,6 @@
   "bugs": {
     "url": "https://github.com/kristoferlund/react-overlap/issues"
   },
-  "homepage": "https://github.com/kristoferlund/react-overlap#readme",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
