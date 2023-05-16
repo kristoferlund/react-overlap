@@ -1,9 +1,21 @@
-import React from "react";
+type OverlapHoverSvgProps = {
+  svg: string;
+  href: string;
+  className?: string;
+  darkMode?: boolean;
+  expand: boolean;
+  index: number;
+  size: number;
+  spacing: number;
+  overlap: number;
+  direction: string;
+  alt: string;
+};
 
 const OverlapHoverSvg = ({
   svg,
   href,
-  className = "",
+  className = '',
   darkMode = false,
   expand,
   index,
@@ -12,9 +24,9 @@ const OverlapHoverSvg = ({
   overlap,
   direction,
   alt,
-}) => {
+}: OverlapHoverSvgProps) => {
   const positionStyle =
-    direction === "right"
+    direction === 'right'
       ? {
           left: expand
             ? `${index * size + index * spacing}px`
@@ -26,7 +38,7 @@ const OverlapHoverSvg = ({
             : `${index * size - index * (size * overlap)}px`,
         };
 
-  const darkModeClass = darkMode ? "dark-mode" : "";
+  const darkModeClass = darkMode ? 'dark-mode' : '';
 
   return (
     <div

@@ -17,24 +17,28 @@ yarn add react-overlap
 ## Using SVG Images
 
 ```javascript
-import React from "react";
-import { OverlapHover, OverlapHoverImage } from "react-overlap";
+import React from 'react';
+import { OverlapHover, OverlapHoverSvg } from 'react-overlap';
+
+import DiscordSvg from './img/svg/Discord.svg';
+import GithubSvg from './img/svg/Github.svg';
+import TwitterSvg from './img/svg/Twitter.svg';
 
 const logoData = [
   {
     svg: GithubSvg,
-    href: "https://github.com/givepraise/praise",
-    alt: "Github",
+    href: 'https://github.com/givepraise/praise',
+    alt: 'Github',
   },
   {
     svg: DiscordSvg,
-    href: "https://discord.gg/U2ydzXBG6C",
-    alt: "Discord",
+    href: 'https://discord.gg/U2ydzXBG6C',
+    alt: 'Discord',
   },
   {
     svg: TwitterSvg,
-    href: "https://twitter.com/givepraise",
-    alt: "Twitter",
+    href: 'https://twitter.com/givepraise',
+    alt: 'Twitter',
   },
 ];
 
@@ -60,24 +64,28 @@ export default App;
 ## Using PNG Images
 
 ```javascript
-import React from "react";
-import { OverlapHover, OverlapHoverImage } from "react-overlap";
+import React from 'react';
+import { OverlapHover, OverlapHoverImage } from 'react-overlap';
+
+import DiscordPng from './img/png/Discord.png';
+import GithubPng from './img/png/Github.png';
+import TwitterPng from './img/png/Twitter.png';
 
 const logoData = [
   {
     img: GithubPng,
-    href: "https://github.com/givepraise/praise",
-    alt: "Github",
+    href: 'https://github.com/givepraise/praise',
+    alt: 'Github',
   },
   {
     img: DiscordPng,
-    href: "https://discord.gg/U2ydzXBG6C",
-    alt: "Discord",
+    href: 'https://discord.gg/U2ydzXBG6C',
+    alt: 'Discord',
   },
   {
     img: TwitterPng,
-    href: "https://twitter.com/givepraise",
-    alt: "Twitter",
+    href: 'https://twitter.com/givepraise',
+    alt: 'Twitter',
   },
 ];
 

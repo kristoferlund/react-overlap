@@ -1,14 +1,24 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+
+type OverlapHoverProps = {
+  children: JSX.Element | JSX.Element[];
+  size?: number;
+  spacing?: number;
+  overlap?: number;
+  direction?: string;
+  className?: string;
+  darkMode?: boolean;
+};
 
 const OverlapHover = ({
   children,
   size = 25,
   spacing = 16,
   overlap = 0.33,
-  direction = "right",
-  className = "",
+  direction = 'right',
+  className = '',
   darkMode = false,
-}) => {
+}: OverlapHoverProps): JSX.Element => {
   const [hovered, setHovered] = useState(false);
 
   const onMouseEnter = () => {
@@ -64,12 +74,12 @@ const OverlapHover = ({
             const logoProps = {
               ...child.props,
               expand: hovered,
-              index: index,
-              size: size,
-              spacing: spacing,
-              overlap: overlap,
-              direction: direction,
-              darkMode: darkMode,
+              index,
+              size,
+              spacing,
+              overlap,
+              direction,
+              darkMode,
             };
             return React.cloneElement(child, logoProps);
           })}

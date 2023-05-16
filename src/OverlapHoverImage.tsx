@@ -1,9 +1,21 @@
-import React from "react";
+type OverlapHoverImageProps = {
+  src: string;
+  href: string;
+  className?: string;
+  darkMode?: boolean;
+  expand: boolean;
+  index: number;
+  size: number;
+  spacing: number;
+  overlap: number;
+  direction: string;
+  alt: string;
+};
 
 const OverlapHoverImage = ({
   src,
   href,
-  className = "",
+  className = '',
   darkMode = false,
   expand,
   index,
@@ -12,9 +24,9 @@ const OverlapHoverImage = ({
   overlap,
   direction,
   alt,
-}) => {
+}: OverlapHoverImageProps) => {
   const positionStyle =
-    direction === "right"
+    direction === 'right'
       ? {
           left: expand
             ? `${index * size + index * spacing}px`
@@ -26,7 +38,7 @@ const OverlapHoverImage = ({
             : `${index * size - index * (size * overlap)}px`,
         };
 
-  const darkModeClass = darkMode ? "dark-mode" : "";
+  const darkModeClass = darkMode ? 'dark-mode' : '';
 
   return (
     <div
