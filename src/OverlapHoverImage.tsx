@@ -3,12 +3,12 @@ type OverlapHoverImageProps = {
   href: string;
   className?: string;
   darkMode?: boolean;
-  expand: boolean;
-  index: number;
-  size: number;
-  spacing: number;
-  overlap: number;
-  direction: string;
+  expand?: boolean;
+  index?: number;
+  size?: number;
+  spacing?: number;
+  overlap?: number;
+  direction?: string;
   alt: string;
 };
 
@@ -18,11 +18,11 @@ const OverlapHoverImage = ({
   className = '',
   darkMode = false,
   expand,
-  index,
-  size,
-  spacing,
-  overlap,
-  direction,
+  index = 0,
+  size = 25,
+  spacing = 16,
+  overlap = 0.33,
+  direction = 'right',
   alt,
 }: OverlapHoverImageProps) => {
   const positionStyle =
