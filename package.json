@@ -1,6 +1,6 @@
 {
   "name": "react-overlap",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A React component for creating overlapping, hoverable images and SVGs.",
   "license": "MIT",
   "repository": {

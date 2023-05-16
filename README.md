@@ -4,6 +4,10 @@
 
 `react-overlap` is a React component that creates a hover effect where images or SVG graphics overlap each other. Use this component is to display logos or icons in a compact space that expands on hover.
 
+## Demo
+
+https://react-overlap.on.fleek.co/
+
 ## Installation
 
 ```bash
